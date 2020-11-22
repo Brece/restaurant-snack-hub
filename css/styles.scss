@@ -1,0 +1,34 @@
+// google font
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+// sass files
+@import "reset";
+@import "variables";
+@import "header";
+@import "about";
+@import "menu";
+@import "footer";
+
+
+// global
+*{
+  box-sizing: border-box;
+}
+
+body{
+  font-family: "Roboto Slab", serif;
+  width: 100vw;
+  overflow-x: hidden;
+}
+
+.sectionHeader{
+  display: inline-block;
+  text-transform: capitalize;
+  font-size: 0.8rem;
+  font-weight: 400;
+  color: #fff;
+  background-color: $red;
+  padding: 6px;
+  border-radius: 5px;
+}
+

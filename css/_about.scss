@@ -1,0 +1,56 @@
+#about {
+  width: 100vw;
+  min-height: 535px;
+  display: grid;
+  grid-template-columns: 45% 55%;
+  grid-template-rows: 60vh;
+}
+
+// animation keyframes
+@keyframes upDown{
+  from{
+    transform: translateY(0);
+  }
+  to{
+    transform: translateY(-4px);
+  }
+}
+
+.about-bg {
+  min-height: 535px;
+  background: url(/img/about-bg.jpeg) center center/cover no-repeat;
+}
+
+.about-info {
+  padding: 70px 90px;
+  h1 {
+    font-size: 3rem;
+    font-weight: 500;
+    text-transform: capitalize;
+    margin: 2rem 0;
+  }
+  p {
+    color: $greyDark;
+    line-height: 1.4;
+  }
+}
+
+.visit-us {
+  margin: 2rem 0;
+  p {
+    position: relative;
+    font-size: 1rem;
+    font-weight: 500;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: $greyDark;
+  }
+  a {
+    position: absolute;
+    top: -10px;
+    margin-left: 17px;
+    font-size: 2rem;
+    color: $green;
+    animation: upDown 1s ease infinite alternate running;
+  }
+}

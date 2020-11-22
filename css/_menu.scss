@@ -1,0 +1,120 @@
+#menu {
+  width: 100vw;
+  height: 100vh;
+  min-height: 970px;
+  padding: 120px;
+  background-color: $greyLight;
+}
+
+.menu-header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  h1 {
+    font-size: 3rem;
+    font-weight: 500;
+    margin: 2rem 0;
+  }
+}
+
+.selection {
+  display: flex;
+  justify-content: center;
+  max-width: 1400px;
+  margin: 50px auto;
+}
+
+.arrow {
+  align-self: center;
+  font-size: 2rem;
+  color: $greyDark;
+  transition: $transition;
+  &:hover {
+    cursor: pointer;
+    color: $green;
+  }
+}
+
+.left {
+  margin-right: 10px;
+}
+
+.right {
+  margin-left: 10px;
+}
+
+.slider-container{
+  width: 100%;
+  max-width: 1400px;
+  overflow: hidden;
+}
+.slider {
+  // width: 95%;
+  // height: 460px;
+  // line up items in one line
+  white-space: nowrap;
+  // get rid of white space between inline-blocks
+  font-size: 0;
+  border-radius: 5px;
+  // counter overflow-y issues by adding extra padding on top for hover effect
+  padding-top: 40px;
+  transform: translateX(-40%);
+}
+
+.item {
+  display: inline-block;
+  white-space: normal;
+  // level inline-block elements !!!
+  vertical-align: top;
+  width: 20%;
+  height: 460px;
+  padding: 50px 30px;
+  position: relative;
+  z-index: 2;
+  border-radius: 5px;
+  border: 1px solid $greyLight;
+  background-color: #fff;
+  transition: $transition;
+  &:hover {
+    transform: translateY(-40px);
+    background-color: $red;
+    border: 1px solid $red;
+    cursor: pointer;
+    box-shadow: 0px 5px 18px -4px rgba(0, 0, 0, 0.68);
+    -webkit-box-shadow: 0px 5px 18px -4px rgba(0, 0, 0, 0.68);
+    -moz-box-shadow: 0px 5px 18px -4px rgba(0, 0, 0, 0.68);
+    h1,
+    p {
+      color: #fff;
+    }
+    .price-tag {
+      visibility: visible;
+    }
+  }
+
+  h1 {
+    font-size: 1.4rem;
+    font-weight: 500;
+    color: $red;
+  }
+  p {
+    font-size: 0.7rem;
+    line-height: 1.5;
+    color: $greyDark;
+    margin: 20px 0;
+  }
+  .price-tag {
+    font-size: 2rem;
+    font-weight: 500;
+    color: $greyDark;
+    visibility: hidden;
+    margin-top: 50px;
+  }
+  img {
+    width: 95%;
+    position: absolute;
+    bottom: 4px;
+    left: 0;
+  }
+}

@@ -1,0 +1,132 @@
+#header {
+  width: 100vw;
+  height: 100vh;
+  min-height: 800px;
+  display: grid;
+  grid-template-columns: 350px 1fr;
+  grid-template-rows: 100vh;
+}
+
+// animation keyframes
+@keyframes upDown{
+  from{
+    transform: translateY(0);
+  }
+  to{
+    transform: translateY(-15px);
+  }
+}
+
+// start LEFT COLUMN ---------------------------------
+.left-column {
+  min-height: 800px;
+  display: flex;
+  flex-direction: column;
+  padding: 3rem 2.5rem;
+}
+
+// .logo{
+//   height: 200px;
+// }
+
+.navbar {
+  margin: 3rem 0;
+  ul {
+    line-height: 3;
+    text-transform: uppercase;
+    font-weight: 600;
+    a {
+      color: #000;
+      text-decoration: none;
+      transition: $transition;
+      &:hover {
+        color: $red;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+.socials {
+  i {
+    width: 30px;
+    height: 30px;
+    font-size: 1.7rem;
+    color: $greyDark;
+    transition: $transition;
+    &:hover {
+      cursor: pointer;
+      color: $green;
+    }
+  }
+}
+
+.location {
+  margin-top: auto;
+  padding: 1.5rem 0;
+  .address {
+    font-size: 0.8rem;
+    font-weight: 400;
+    color: $greyDark;
+    line-height: 1.2;
+  }
+  .number {
+    font-size: 1rem;
+    font-weight: 500;
+    margin: 1.5rem 0;
+    color: $green;
+  }
+}
+// end LEFT COLUMN ---------------------------------
+
+// start RIGHT COLUMN ---------------------------------
+.right-column {
+  width: calc(100vw - 350px);
+  min-height: 800px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 100px;
+
+  background: #f67f7f;
+  background: -moz-radial-gradient(
+    center,
+    ellipse cover,
+    #f67f7f 0%,
+    #d27093 100%
+  );
+  background: -webkit-radial-gradient(
+    center,
+    ellipse cover,
+    #f67f7f 0%,
+    #d27093 100%
+  );
+  background: radial-gradient(ellipse at center, #f67f7f 0%, #d27093 100%);
+  
+  .tag-box{
+    align-self: flex-start;
+    text-transform: uppercase;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #fff;
+    background-color: $green;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+  }
+
+  h1{
+    font-size: 4rem;
+    font-weight: 900;
+    color: #fff;
+    align-self: flex-start;
+  }
+  img {
+    max-width: 100%;
+    width: 1000px;
+    animation: upDown 1s ease infinite alternate running;
+  }
+}
+// end RIGHT COLUMN ---------------------------------
+
