@@ -59,7 +59,7 @@
   border-radius: 5px;
   // counter overflow-y issues by adding extra padding on top for hover effect
   padding-top: 40px;
-  transform: translateX(-40%);
+  // transform: translateX(-40%);
 }
 
 .item {
@@ -116,5 +116,14 @@
     position: absolute;
     bottom: 4px;
     left: 0;
+  }
+}
+
+//=========================================================
+// media queries
+
+@media only screen and (max-width: 1200px){
+  .item{
+    width: 25%;
   }
 }

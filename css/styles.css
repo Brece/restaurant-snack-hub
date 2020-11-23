@@ -269,6 +269,21 @@ table {
           animation: upDown 1s ease infinite alternate running;
 }
 
+@media only screen and (max-width: 1200px) {
+  #about {
+    height: 480px;
+    -ms-grid-columns: 100%;
+        grid-template-columns: 100%;
+  }
+  .about-bg {
+    display: none;
+  }
+  .about-info {
+    height: 480px;
+    text-align: center;
+  }
+}
+
 #menu {
   width: 100vw;
   height: 100vh;
@@ -344,8 +359,6 @@ table {
   font-size: 0;
   border-radius: 5px;
   padding-top: 40px;
-  -webkit-transform: translateX(-40%);
-          transform: translateX(-40%);
 }
 
 .item {
@@ -410,6 +423,12 @@ table {
   position: absolute;
   bottom: 4px;
   left: 0;
+}
+
+@media only screen and (max-width: 1200px) {
+  .item {
+    width: 25%;
+  }
 }
 
 #footer {

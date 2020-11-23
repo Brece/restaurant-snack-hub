@@ -54,3 +54,20 @@
     animation: upDown 1s ease infinite alternate running;
   }
 }
+
+//=========================================================
+// media queries
+
+@media only screen and (max-width: 1200px){
+  #about{
+    height: 480px;
+    grid-template-columns: 100%;
+  }
+  .about-bg{
+    display: none;
+  }
+  .about-info{
+    height: 480px;
+    text-align: center;
+  }
+}
