@@ -40,11 +40,21 @@ function carousel() {
 //=========================================================
 // create media query conditions that target viewport's size with adjusted slide size respectivly
 
-const tabletMediaQuery = window.matchMedia("(max-width: 1200px)");
+const smallDevice = window.matchMedia("(max-width: 800px)");
+const tabletVertical = window.matchMedia("(max-width: 1000px)");
+const tabletHorizontal = window.matchMedia("(max-width: 1200px)");
 
 // listen for changes if media query is true
-function handleTabletChange(e) {
-  if (e.matches) {
+function handleWindowChange() {
+  if (smallDevice.matches) {
+    nextBtnLimit = 1;
+    carouselLimit = 0;
+    slideSize = 100;
+  } else if (tabletVertical.matches) {
+    nextBtnLimit = 3;
+    carouselLimit = 1;
+    slideSize = 33.33;
+  } else if (tabletHorizontal.matches) {
     nextBtnLimit = 4;
     carouselLimit = 2;
     slideSize = 25;
@@ -56,7 +66,9 @@ function handleTabletChange(e) {
 }
 
 // register event listener
-tabletMediaQuery.addEventListener("change", handleTabletChange);
+tabletHorizontal.addEventListener("change", handleWindowChange);
+tabletVertical.addEventListener("change", handleWindowChange);
+smallDevice.addEventListener("change", handleWindowChange);
 
 // initial check
-handleTabletChange(tabletMediaQuery);
+handleWindowChange();

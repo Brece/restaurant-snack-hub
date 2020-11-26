@@ -8,11 +8,11 @@
 }
 
 // animation keyframes
-@keyframes upDown{
-  from{
+@keyframes upDown {
+  from {
     transform: translateY(0);
   }
-  to{
+  to {
     transform: translateY(-15px);
   }
 }
@@ -103,8 +103,8 @@
     #d27093 100%
   );
   background: radial-gradient(ellipse at center, #f67f7f 0%, #d27093 100%);
-  
-  .tag-box{
+
+  .tag-box {
     align-self: flex-start;
     text-transform: uppercase;
     font-size: 1rem;
@@ -116,7 +116,7 @@
     border-radius: 5px;
   }
 
-  h1{
+  h1 {
     font-size: 4rem;
     font-weight: 900;
     color: #fff;
@@ -130,3 +130,105 @@
 }
 // end RIGHT COLUMN ---------------------------------
 
+//=========================================================
+// media queries
+
+@media only screen and (max-width: 1000px) {
+  #header {
+    grid-template-columns: 100vw;
+    grid-template-rows: 200px 1fr;
+  }
+
+  .left-column {
+    width: 100%;
+    min-height: 200px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 3rem 2.5rem;
+    .socials {
+      display: none;
+    }
+  }
+
+  .logo{
+    img{
+      width: 100px;
+      height: 100px;
+    }
+
+  }
+  .navbar {
+    ul {
+      display: flex;
+      line-height: 1;
+      li{
+        margin: 0 1rem;
+      }
+    }
+  }
+
+  .right-column {
+    width: 100%;
+    min-height: calc(100vh - 200px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 100px;
+  }
+}
+
+@media only screen and (max-width: 800px){
+  #header {
+    grid-template-rows: 150px 1fr;
+  }
+
+  .left-column {
+    min-height: 150px;
+    padding: 2rem 2.5rem;
+  }
+  .logo{
+    img{
+      width: 75px;
+      height: 75px;
+    }
+
+  }
+  .navbar {
+    align-self: center;
+    ul {
+      font-size: 0.9rem;
+    }
+  }
+  
+  .location {
+    display: none;
+  }
+
+  .right-column {
+    min-height: calc(100vh - 150px);
+  }
+}
+
+@media only screen and (max-width: 550px){
+  #header {
+    grid-template-rows: 100px 1fr;
+  }
+  .left-column {
+    min-height: 100px;
+    padding: 1rem 2.5rem;
+  }
+  .logo{
+    display: none;
+  }
+  .right-column {
+    min-height: calc(100vh - 100px);
+    h1 {
+      font-size: 3rem;
+      font-weight: 900;
+      color: #fff;
+      align-self: flex-start;
+    }
+  }
+}

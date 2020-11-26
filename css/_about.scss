@@ -60,14 +60,23 @@
 
 @media only screen and (max-width: 1200px){
   #about{
-    height: 480px;
-    grid-template-columns: 100%;
+    display: block;
+    min-height: 480px;
   }
   .about-bg{
     display: none;
   }
   .about-info{
-    height: 480px;
+    min-height: 480px;
     text-align: center;
   }
+}
+
+@media only screen and (max-width: 600px){
+  .about-info {
+    padding: 70px 90px;
+    h1 {
+      font-size: 2.5rem;
+    }
+  }  
 }
